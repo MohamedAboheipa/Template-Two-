@@ -168,14 +168,31 @@ header .container .icon i {
     display: none;
   }
 }
+@media (max-width: 380px) {
+  .landing .land-text {
+    padding: 50px 40px 50px 40px;
+  }
+}
 .landing .land-text h2 {
   font-size: 32px;
   margin-bottom: 30px;
   line-height: 1.5;
 }
+@media (max-width: 380px) {
+  .landing .land-text h2 {
+    font-size: 25px;
+    line-height: 1.5;
+  }
+}
 .landing .land-text p {
   font-size: 14px;
   line-height: 2;
+}
+@media (max-width: 380px) {
+  .landing .land-text p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
 }
 .landing i {
   position: absolute;
@@ -532,6 +549,11 @@ header .container .icon i {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 358px) {
+  .about .about-plans .plans-text {
+    padding: 30px 80px;
+  }
+}
 .about .about-plans .plans-text .plan {
   flex-basis: 25%;
   text-align: center;
@@ -785,6 +807,10 @@ header .container .icon i {
 .pricing .container .cards .card {
   background-color: #fcfcfc;
   box-shadow: 0.5px 0.5px 3px 0px rgb(184 184 184 / 40%);
+  transition: 0.3s;
+}
+.pricing .container .cards .card:hover {
+  transform: scale(1.05);
 }
 .pricing .container .cards .card .price {
   padding: 30px 40px;
@@ -841,6 +867,15 @@ header .container .icon i {
   display: block;
   border: 1px solid var(--main-color);
   width: fit-content;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.pricing .container .cards .card .buy a:hover {
+  box-shadow: 0 0 0 80px var(--main-color) inset;
+  color: white;
 }
 .pricing .container p.contact {
   text-align: center;
@@ -1057,3 +1092,16 @@ footer .container .text span {
   font-weight: bold;
 }
 /* End Footer */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+::-webkit-scrollbar-button {
+  height: 10px;
+  background-color: black;
+}
